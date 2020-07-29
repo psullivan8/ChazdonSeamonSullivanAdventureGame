@@ -118,6 +118,8 @@ namespace TextBasedAdventureGame
         {
             try
             {
+                System.Media.SoundPlayer search = new System.Media.SoundPlayer();
+                search.SoundLocation = "Music/Search.wav";
                 if (lbItems.SelectedItem != null)
                 {
                     string type = lbItems.SelectedItem.GetType().ToString();
@@ -130,6 +132,7 @@ namespace TextBasedAdventureGame
                                 InventoryItem item = new InventoryItem();
                                 item = (InventoryItem)hidingPlace.Search();
                                 player.Location.Items.Add(item);
+                                search.Play();
                             }
                             else
                             {
@@ -143,6 +146,7 @@ namespace TextBasedAdventureGame
                                 InventoryItem item = new InventoryItem();
                                 item = (InventoryItem)portableHidingPlace.Search();
                                 player.Location.Items.Add(item);
+                                search.Play();
                             }
                             else
                             {
@@ -154,9 +158,6 @@ namespace TextBasedAdventureGame
                             break;
                     }
                     UpdateDisplay();
-                    System.Media.SoundPlayer search = new System.Media.SoundPlayer();
-                    search.SoundLocation = "Music/Search.wav";
-                    search.Play();
                 }
                 else
                 {
