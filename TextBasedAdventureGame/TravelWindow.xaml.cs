@@ -18,6 +18,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//TODO:  I loved your game.  I even won!
+//TODO:  score 100/100
+
 namespace TextBasedAdventureGame
 {
     /// <summary>
